@@ -1,10 +1,10 @@
-<section class="hero is-fullheight is-white is-bold">
+<section class="hero is-fullheight is-bold">
   <div class="hero-body">
     <div class="container">
-      <div class="column is-6 is-offset-2">
+      <div class="column is-6 is-offset-3">
         <article class="message is-danger">
         <div class="message-body">
-          <p class="is-size-1"> <%= @error_message %> </p>
+          <p class="is-size-2 has-text-centered"> <%= @error_message %> </p>
         </div>
       </article>
       <div class="has-text-centered mt-3">
@@ -12,6 +12,18 @@
         class: "button is-fullwidth is-danger")  %>
       </div>
       </div>
+    </div>
+  </div>
+   <div class="footer">
+    <div class="content has-text-centered">
+      <p class="has-text-black">
+        Hecho por: <a href="https://github.com/llenrique" target="_blank">Enrique López</a> con
+        <a href="https://bulma.io" target="_blank">Bulma</a> y <a href="https://www.phoenixframework.org/" target="_blank"> Elixir Phoenix</a>
+      </p>
+      <p class="has-text-black">
+        Proyecto de código abierto en:
+        <a href="https://github.com/llenrique/intermoto">Github</a>
+      </p>
     </div>
   </div>
 </section>

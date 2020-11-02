@@ -1,7 +1,7 @@
-<div class="hero is-fullheight is-white is-bold">
+<section class="hero is-fullheight is-bold">
   <div class="hero-body">
     <div class="container">
-      <div class="column is-6 is-offset-2">
+      <div class="column is-4 is-offset-4">
         <h1 class="title"> Te toco darle regalo a: </h1>
         <%= render(IntermotoWeb.PeopleView, "people_card.html", p: @taken_people, conn: @conn) %>
         <div class="has-text-centered mt-3">
@@ -11,4 +11,16 @@
       </div>
     </div>
   </div>
-</div>
+   <div class="footer">
+    <div class="content has-text-centered">
+      <p class="has-text-black">
+        Hecho por: <a href="https://github.com/llenrique" target="_blank">Enrique López</a> con
+        <a href="https://bulma.io" target="_blank">Bulma</a> y <a href="https://www.phoenixframework.org/" target="_blank"> Elixir Phoenix</a>
+      </p>
+      <p class="has-text-black">
+        Proyecto de código abierto en:
+        <a href="https://github.com/llenrique/intermoto">Github</a>
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,4 +1,4 @@
-<section class="hero is-fullheight">
+<section class="hero is-success is-fullheight">
   <div class="hero-body">
     <div class="container">
       <h1 class="title is-8"> Quien eres? </h1>
@@ -10,6 +10,18 @@
           <% end %>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="content has-text-centered">
+      <p class="has-text-black">
+        Hecho por: <a href="https://github.com/llenrique" target="_blank">Enrique López</a> con
+        <a href="https://bulma.io" target="_blank">Bulma</a> y <a href="https://www.phoenixframework.org/" target="_blank"> Elixir Phoenix</a>
+      </p>
+      <p class="has-text-black">
+        Proyecto de código abierto en:
+        <a href="https://github.com/llenrique/intermoto">Github</a>
+      </p>
     </div>
   </div>
 </section>

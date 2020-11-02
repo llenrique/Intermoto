@@ -9,7 +9,7 @@
         </p>
 
         <ol>
-          <li> De la lista de personas que se muestra, debes buscarte y seleccionarte dando click en cualquier parte de la tarjeta que tiene <code>tu nombre y foto</code>. </li>
+          <li> De la lista de personas que se muestra, debes buscarte, seleccionarte y dar click en el botón <code> Seleccionar </code>.</li>
           <li> El sistema te mostrara el nombre y foto de a quien debes darle/enviarle regalo este 24 de Diciembre. </li>
           <li> Si recargas la página, te mostrata un mensaje de error ya que tú ya has participado. </li>
           <li> Da click en el botón que dice: Return. </li>
@@ -30,15 +30,15 @@
         </p>
 
         <p>
-          Cada persona en la lista tiene dos <code>status</code>, uno para saber cuando una persona ya <i>"Tomo un papelito de la urna"</i> y otro para saber cuando una persona fue <i>"Sacada de la urna"</i>. Cuando una persona clickea en su tarjeta, se actualiza uno de estos dos status indicandole al sistema que ya participaste y actualiza el otro de estos status de la persona que te toco indicandole al sistema que esta persona ya fue <i>"Sacada de la urna"</i>.
+          Cada persona en la lista tiene dos <code>status</code>, uno para saber cuando una persona ya <i>"Tomo un papelito de la urna"</i> y otro para saber cuando una persona fue <i>"Sacada de la urna"</i>. Cuando una persona se selecciona, se actualiza uno de estos dos status indicandole al sistema que ya participaste y actualiza el otro de estos status de la persona que te toco indicandole al sistema que esta persona ya fue <i>"Sacada de la urna"</i>.
         </p>
 
         <p>
-          Cada persona tiene un <code>id</code> o  <b>identificador único</b> asignado, por lo que cuando clickeas en tu tarjeta, el sistema te excluye de la lista de personas que no han sido sacadas de la urna para asegurar que <b>no te des regalo a ti mismo</b>.
+          Cada persona tiene un <code>id</code> o <b>identificador único</b> asignado, por lo que cuando te seleccionas, el sistema te excluye de la lista de personas que no han sido sacadas de la urna para asegurar que <b>no te des regalo a ti mismo</b>.
          </p>
 
         <p>
-          Cuando clickeas en tu tarjeta, el sistema obtiene la lista de personas que no han sido sacadas de la urna y obtiene a una persona al azar por lo que <b>no hay un patron de asignación</b>.
+          Cuando clickeas en el botón <code>Seleccionar</code>, el sistema obtiene la lista de personas que no han sido sacadas de la urna y obtiene a una persona al azar por lo que <b>no hay un patron de asignación</b>.
          </p>
 
         <p>
@@ -47,8 +47,11 @@
 
          <h2 class="subtitle">Listo para participar?</h2>
 
-        <%= link("Estoy Listo!", to: Routes.people_path(@conn, :index), class: "button is-link")
-        %>
+        <%= link(
+          "Estoy Listo!",
+          to: Routes.people_path(@conn, :index),
+          class: "button is-link"
+        )%>
       </div>
     </div>
   </div>
@@ -59,6 +62,10 @@
     <p>
       Hecho por: <a href="https://github.com/llenrique" target="_blank">Enrique López</a> con
       <a href="https://bulma.io" target="_blank">Bulma</a> y <a href="https://www.phoenixframework.org/" target="_blank"> Elixir Phoenix</a>
+    </p>
+    <p>
+      Proyecto de código abierto en:
+      <a href="https://github.com/llenrique/intermoto">Github</a>
     </p>
   </div>
 </footer>
