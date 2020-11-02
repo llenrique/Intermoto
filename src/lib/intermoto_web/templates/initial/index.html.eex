@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="section">
+    <div class="conitainer">
+      <div class="content is-medium">
+        <h1 class="title"> Instrucciones </h1>
+
+        <p>
+          A continuación, se muestran las instrucciones para saber a quien se le tiene que dar regalo en el intercambio navideño que organizamos cada año.
+        </p>
+
+        <ol>
+          <li> De la lista de personas que se muestra, debes buscarte y seleccionarte dando click en cualquier parte de la tarjeta que tiene <code>tu nombre y foto</code>. </li>
+          <li> El sistema te mostrara el nombre y foto de a quien debes darle/enviarle regalo este 24 de Diciembre. </li>
+          <li> Si recargas la página, te mostrata un mensaje de error ya que tú ya has participado. </li>
+          <li> Da click en el botón que dice: Return. </li>
+        </ol>
+
+        <p>
+          Así de fácil, así de sencillo.
+        </p>
+
+        <p>
+          Ten en cuenta que el sistema se asegura de que <b>no te des regalo a ti mismo</b>, y que si intentas obtener a otra persona para darle regalo el sistema no te dejara. De esta manera se asegura que todos den y todos reciban regalo.
+        </p>
+
+        <h2 class="subtitle">Cómo funciona?</h2>
+
+        <p>
+          Si ya participaste, no apareceras en la lista.
+        </p>
+
+        <p>
+          Cada persona en la lista tiene dos <code>status</code>, uno para saber cuando una persona ya <i>"Tomo un papelito de la urna"</i> y otro para saber cuando una persona fue <i>"Sacada de la urna"</i>. Cuando una persona clickea en su tarjeta, se actualiza uno de estos dos status indicandole al sistema que ya participaste y actualiza el otro de estos status de la persona que te toco indicandole al sistema que esta persona ya fue <i>"Sacada de la urna"</i>.
+        </p>
+
+        <p>
+          Cada persona tiene un <code>id</code> o  <b>identificador único</b> asignado, por lo que cuando clickeas en tu tarjeta, el sistema te excluye de la lista de personas que no han sido sacadas de la urna para asegurar que <b>no te des regalo a ti mismo</b>.
+         </p>
+
+        <p>
+          Cuando clickeas en tu tarjeta, el sistema obtiene la lista de personas que no han sido sacadas de la urna y obtiene a una persona al azar por lo que <b>no hay un patron de asignación</b>.
+         </p>
+
+        <p>
+          El sistema no almacena información sobre quien le da regalo a quien por lo que es imposible saber quien le va a dar regalo a quien.
+         </p>
+
+         <h2 class="subtitle">Listo para participar?</h2>
+
+        <%= link("Estoy Listo!", to: Routes.people_path(@conn, :index), class: "button is-link")
+        %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      Hecho por: <a href="https://github.com/llenrique" target="_blank">Enrique López</a> con
+      <a href="https://bulma.io" target="_blank">Bulma</a> y <a href="https://www.phoenixframework.org/" target="_blank"> Elixir Phoenix</a>
+    </p>
+  </div>
+</footer>

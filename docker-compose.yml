@@ -1,0 +1,31 @@
+version: '3.7'
+services:
+  phx:
+    image: resuelve/phoenix-alpine:1.5.4-otp22
+    ports:
+      - ${HTTP_PORT:-4000}:${HTTP_PORT:-4000}
+    volumes:
+      - ./src:/intermoto/src
+      - deps:/intermoto/src/deps
+      - builds:/intermoto/src/_build
+      - node_modules:/intermoto/src/assets/node_modules
+    depends_on: 
+      - postgres
+    environment:
+      - MIX_ENV=${ENV:-dev}
+      - PG_DATABASE_URL=ecto://postgres:postgres@postgres/${PG_DATABASE_NAME}_${ENV}
+      - HTTP_PORT=${HTTP_PORT:-4000}
+    working_dir: /intermoto/src
+    command: mix phx.server
+
+  postgres:
+    image: postgres:9.6
+    ports:
+      - "${POSTGRES_HOST_PORT:-5432}:${POSTGRES_PORT:-5432}"
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: "trust"
+    
+volumes:
+  deps:
+  builds:
+  node_modules:

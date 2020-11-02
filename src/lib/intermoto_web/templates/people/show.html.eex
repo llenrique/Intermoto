@@ -1,0 +1,14 @@
+<div class="hero is-fullheight is-white is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="column is-6 is-offset-2">
+        <h1 class="title"> Te toco darle regalo a: </h1>
+        <%= render(IntermotoWeb.PeopleView, "people_card.html", p: @taken_people, conn: @conn) %>
+        <div class="has-text-centered mt-3">
+          <%= link("Return", to: Routes.people_path(@conn, :index),
+          class: "button is-fullwidth is-success")  %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

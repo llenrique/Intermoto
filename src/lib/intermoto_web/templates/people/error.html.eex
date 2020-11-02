@@ -1,0 +1,17 @@
+<section class="hero is-fullheight is-white is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="column is-6 is-offset-2">
+        <article class="message is-danger">
+        <div class="message-body">
+          <p class="is-size-1"> <%= @error_message %> </p>
+        </div>
+      </article>
+      <div class="has-text-centered mt-3">
+        <%= link("Return", to: Routes.people_path(@conn, :index),
+        class: "button is-fullwidth is-danger")  %>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>

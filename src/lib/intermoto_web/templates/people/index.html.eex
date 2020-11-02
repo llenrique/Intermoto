@@ -1,0 +1,15 @@
+<section class="hero is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-8"> Quien eres? </h1>
+      <div class="control">
+        <div class="select is-fullwidth is-large has-text-centered">
+          <%= form_for @conn, Routes.people_path(@conn, :select), [method: :get], fn f -> %>
+            <%= select(f, :people_id, @people) %>
+            <%= submit "Seleccionar", class: "button is-info mt-2 is-large" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
