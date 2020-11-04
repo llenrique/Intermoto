@@ -19,8 +19,10 @@ defmodule IntermotoWeb.Router do
     get "/", InitialController, :index
     get "/reset", ResetController, :reset
     get "/list", PeopleController, :index
+    put "/delete", PeopleController, :delete
     get "/select", PeopleController, :select
     get "new", PeopleController, :new
+    get "/delete", PeopleController, :delete
     post "/", PeopleController, :create
   end
 

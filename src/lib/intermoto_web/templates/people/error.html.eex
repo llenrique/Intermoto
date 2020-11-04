@@ -3,18 +3,18 @@
     <div class="container">
       <div class="column is-6 is-offset-3">
         <article class="message is-danger">
-        <div class="message-body">
-          <p class="is-size-2 has-text-centered"> <%= @error_message %> </p>
+          <div class="message-body">
+            <p class="is-size-2 has-text-centered"> <%= @error_message %> </p>
+          </div>
+        </article>
+        <div class="has-text-centered mt-3">
+          <%= link("Reiniciar intercambio", to: Routes.reset_path(@conn, :reset),
+          class: "button is-fullwidth is-danger")  %>
         </div>
-      </article>
-      <div class="has-text-centered mt-3">
-        <%= link("Reiniciar intercambio", to: Routes.reset_path(@conn, :reset),
-        class: "button is-fullwidth is-danger")  %>
-      </div>
       </div>
     </div>
   </div>
-   <div class="footer">
+  <div class="footer">
     <div class="content has-text-centered">
       <p class="has-text-black">
         Hecho por: <a href="https://github.com/llenrique" target="_blank">Enrique López</a> con

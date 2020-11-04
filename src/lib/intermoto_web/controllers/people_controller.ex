@@ -32,7 +32,18 @@ defmodule IntermotoWeb.PeopleController do
   end
 
   def create(conn, %{"people" => people}) do
-    PeopleHelper.create(people)
+    with :ok <- PeopleHelper.create(people) do
+      redirect(conn, to: Routes.people_path(conn, :index))
+    else
+      {:error, message} ->
+        conn
+        |> assign(:error_message, message)
+        |> render("error.html")
+    end
+  end
+
+  def delete(conn, _params) do
+    PeopleManager.delete()
 
     redirect(conn, to: Routes.people_path(conn, :index))
   end

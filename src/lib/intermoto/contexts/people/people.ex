@@ -15,6 +15,7 @@ defmodule Intermoto.Contexts.People.People do
   def changeset(%People{} = people, params) do
     people
     |> cast(params, [:name])
+    |> validate_required([:name])
   end
 
   def update_changeset(%People{} = people, params) do

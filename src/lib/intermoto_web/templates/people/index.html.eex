@@ -1,15 +1,38 @@
-<section class="hero is-success is-fullheight">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title is-8"> Quien eres? </h1>
-      <div class="control">
-        <div class="select is-fullwidth is-large has-text-centered">
-          <%= form_for @conn, Routes.people_path(@conn, :select), [method: :get], fn f -> %>
-            <%= select(f, :people_id, @people) %>
-            <%= submit "Seleccionar", class: "button is-info mt-2 is-large" %>
-          <% end %>
+<section class="hero is-white is-fullheight">
+  <div class="hero-head">
+    <header class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="<%= Routes.initial_path(@conn, :index) %>" class="title navbar-item"> Instrucciones </a>
+        </div>
+        <div class="navbar-end">
+          <span class="navbar-item">
+            <a href="<%= Routes.people_path(@conn, :new) %>" class="button is-info">Create List</a>
+            <a href="<%= Routes.reset_path(@conn, :reset) %>" class="button is-warning">Reset Interchange</a>
+            <a href="<%= Routes.people_path(@conn, :delete) %>" class="button is-danger">Delete List</a>
+          </span>
         </div>
       </div>
+    </header>
+  </div>
+  <div class="hero-body">
+    <div class="container">
+      <%= if Enum.empty?(@people) do %>
+        <h1 class="title is-8 has-text-centered"> No hay ningun participante </h1>
+        <h2 class="subtitle is-8 has-text-centered"> Crea una nueva lista </h2>
+      <% else %>
+        <h1 class="title is-8"> Quien eres? </h1>
+        <div class="field">
+          <div class="control">
+            <div class="select is-fullwidth is-large has-text-centered">
+              <%= form_for @conn, Routes.people_path(@conn, :select), [method: :get], fn f -> %>
+                <%= select(f, :people_id, @people) %>
+                <%= submit "Seleccionar", class: "button is-info mt-2 is-large" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
   <div class="footer">

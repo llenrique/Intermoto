@@ -34,6 +34,11 @@ defmodule Intermoto.Contexts.People.PeopleManager do
     |> Repo.insert
   end
 
+  def delete() do
+    People
+    |> Repo.delete_all()
+  end
+
   def get(id), do: Repo.get(People, id)
 
   def get_all(), do: Repo.all(People)

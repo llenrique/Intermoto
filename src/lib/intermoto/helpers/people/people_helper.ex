@@ -26,11 +26,13 @@ defmodule Intermoto.Helpers.People.PeopleHelper do
     end
   end
 
+  def create(""), do: {:error, "No hay participantes definidos"}
+
   def create(people) do
-    people
-    |> String.split(",")
-    |> Enum.map(fn p ->
-      PeopleManager.create(%{name: p})
+    people_list = String.split(people, ",")
+
+    Enum.each(people_list, fn name ->
+      PeopleManager.create(%{name: name})
     end)
   end
 end
