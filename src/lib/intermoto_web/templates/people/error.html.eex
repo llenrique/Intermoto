@@ -8,7 +8,7 @@
         </div>
       </article>
       <div class="has-text-centered mt-3">
-        <%= link("Return", to: Routes.people_path(@conn, :index),
+        <%= link("Reiniciar intercambio", to: Routes.reset_path(@conn, :reset),
         class: "button is-fullwidth is-danger")  %>
       </div>
       </div>

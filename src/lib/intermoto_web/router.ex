@@ -20,6 +20,8 @@ defmodule IntermotoWeb.Router do
     get "/reset", ResetController, :reset
     get "/list", PeopleController, :index
     get "/select", PeopleController, :select
+    get "new", PeopleController, :new
+    post "/", PeopleController, :create
   end
 
   # Other scopes may use custom stacks.

@@ -15,15 +15,22 @@ defmodule Intermoto.Helpers.People.PeopleHelper do
         |> PeopleManager.get_not_taken()
         |> _select_random()
     end
-
-
   end
 
   defp _select_random(people_list) do
-    [taken_person] =
-      people_list
-      |> Enum.take_random(1)
+    with [taken_person] <- Enum.take_random(people_list, 1) do
+      PeopleManager.update(taken_person, %{taken_status: true})
+    else
+      [] ->
+        {:error, "Ha ocurrido un error"}
+    end
+  end
 
-    PeopleManager.update(taken_person, %{taken_status: true})
+  def create(people) do
+    people
+    |> String.split(",")
+    |> Enum.map(fn p ->
+      PeopleManager.create(%{name: p})
+    end)
   end
 end

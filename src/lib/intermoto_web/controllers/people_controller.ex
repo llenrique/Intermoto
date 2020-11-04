@@ -26,4 +26,14 @@ defmodule IntermotoWeb.PeopleController do
         |> render("error.html")
     end
   end
+
+  def new(conn, _params) do
+    render(conn, "new.html")
+  end
+
+  def create(conn, %{"people" => people}) do
+    PeopleHelper.create(people)
+
+    redirect(conn, to: Routes.people_path(conn, :index))
+  end
 end

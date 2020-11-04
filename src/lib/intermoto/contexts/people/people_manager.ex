@@ -28,6 +28,12 @@ defmodule Intermoto.Contexts.People.PeopleManager do
     |> Repo.update
   end
 
+  def create(attrs) do
+    %People{}
+    |> People.changeset(attrs)
+    |> Repo.insert
+  end
+
   def get(id), do: Repo.get(People, id)
 
   def get_all(), do: Repo.all(People)
