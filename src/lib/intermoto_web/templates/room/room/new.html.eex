@@ -21,7 +21,7 @@
       <%= submit gettext("Create new room"), class: "button is-info has-text-centered"%>
     </div>
     <div class="control">
-      <%= link(gettext("Or Enter to existing room"), to: Routes.room_path(@conn, :index), class: "button is-light is-text") %>
+      <%= link(gettext("Or Enter to existing room"), to: Routes.session_path(@conn, :new), class: "button is-light is-text") %>
     </div>
   </div>
 <% end %>

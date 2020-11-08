@@ -4,18 +4,21 @@ defmodule IntermotoWeb.Room.RoomController do
   alias Intermoto.Helpers.Room.RoomHelper
   alias Intermoto.Contexts.Room.RoomManager
 
-  def index(conn, _params) do
-    render(conn, "index.html")
+  def new(conn, _params) do
+    render(conn, "new.html")
   end
 
   def create(conn, %{"name" => name} = params) do
     with {:ok, room} <- RoomHelper.create(params) do
       redirect(conn, to: Routes.room_path(conn, :show, room.room_code))
+    else
+      {:error, _errors} ->
+        redirect(conn, to: Routes.room_path(conn, :new))
     end
   end
 
   def show(conn, %{"id" => room_code}) do
-    case RoomManager.get(room_code) do
+    case RoomManager.get_code(room_code) do
       [] ->
         redirect(conn, to: Routes.room_path(conn, :index))
       room ->
@@ -23,5 +26,13 @@ defmodule IntermotoWeb.Room.RoomController do
         |> assign(:room, room)
         |> render("show.html")
     end
+  end
+
+  def room(conn, %{"room_code" => room_code}) do
+    room = RoomManager.get(room_code)
+
+    conn
+    |> assign(:room, room)
+    |> render("room.html")
   end
 end

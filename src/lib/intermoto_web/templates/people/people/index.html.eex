@@ -1,0 +1,24 @@
+<%= if Enum.empty?(@people) do %>
+  <div class="has-text-centered">
+    <p class="is-size-2">
+      <%= gettext("Its looks like there are no people in the room") %>
+    </p>
+    <%= link(
+      gettext("Add you to the room"),
+      to: Routes.room_people_path(@conn, :new, @room.room_code),
+      class: "button is-info is-medium"
+    ) %>
+  </div>
+<% else %>
+<h1 class="title is-8"> Quien eres? </h1>
+<div class="field">
+  <div class="control">
+    <div class="select is-fullwidth is-large has-text-centered">
+      <%= form_for @conn, Routes.room_people_path(@conn, :select, @room.room_code), [method: :get], fn f -> %>
+        <%= select(f, :people_id, @people) %>
+        <%= submit "Seleccionar", class: "button is-info mt-2 is-large" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% end %>

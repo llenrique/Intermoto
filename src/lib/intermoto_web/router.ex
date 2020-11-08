@@ -17,17 +17,17 @@ defmodule IntermotoWeb.Router do
     pipe_through :browser
 
     get "/", InitialController, :index
-    get "/reset", ResetController, :reset
-    get "/list", PeopleController, :index
-    put "/delete", PeopleController, :delete
-    get "/select", PeopleController, :select
-    get "new", PeopleController, :new
-    get "/delete", PeopleController, :delete
-    post "/", PeopleController, :create
 
-    scope "/room", Room do
-      resources "/", RoomController, only: [:index, :create, :show]
+    resources "/room", Room.RoomController, only: [:new, :create, :show] do
+      get "/reset", ResetController, :reset
+      get "/people/select", People.PeopleController, :select
+      resources "/people", People.PeopleController
     end
+
+    resources "/sessions", SessionController, only: [:create, :delete]
+    get "/login-room", SessionController, :new
+    get "/logout-room", SessionController, :delete
+
   end
 
 

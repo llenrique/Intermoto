@@ -6,6 +6,8 @@ defmodule Intermoto.Contexts.People.People do
   alias Intermoto.Contexts.People.People
   alias Intermoto.Contexts.Room.Room
 
+  @required [:name, :room_id]
+
   schema "people" do
     field :name, :string, null: false
     field :taken_status, :boolean, default: false
@@ -17,8 +19,8 @@ defmodule Intermoto.Contexts.People.People do
 
   def changeset(%People{} = people, params) do
     people
-    |> cast(params, [:name])
-    |> validate_required([:name])
+    |> cast(params, @required)
+    |> validate_required(@required)
   end
 
   def update_changeset(%People{} = people, params) do

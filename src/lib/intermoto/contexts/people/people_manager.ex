@@ -5,9 +5,10 @@ defmodule Intermoto.Contexts.People.PeopleManager do
   alias Intermoto.Repo
   alias Intermoto.Contexts.People.People
 
-  def list() do
+  def list(room_id) do
     People
     |> where([p], p.select_status == false)
+    |> where([p], p.room_id == ^room_id)
     |> select([p], %{
       name: p.name,
       id: p.id
@@ -16,9 +17,11 @@ defmodule Intermoto.Contexts.People.PeopleManager do
     |> Repo.all()
   end
 
-  def get_not_taken(id) do
+  def get_not_taken(id, room_id) do
     People
-    |> where([p], p.id != ^id and p.taken_status == false)
+    |> where([p], p.id != ^id)
+    |> where([p], p.taken_status == false)
+    |> where([p], p.room_id == ^room_id)
     |> Repo.all
   end
 
@@ -42,4 +45,10 @@ defmodule Intermoto.Contexts.People.PeopleManager do
   def get(id), do: Repo.get(People, id)
 
   def get_all(), do: Repo.all(People)
+
+  def get_all_by_room(room_id) do
+    People
+    |> where([p], p.room_id == ^room_id)
+    |> Repo.all()
+  end
 end

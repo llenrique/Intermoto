@@ -1,17 +1,20 @@
 <section class="hero is-fullheight is-bold">
   <div class="hero-body">
     <div class="container">
-      <div class="column is-4 is-offset-4">
-        <h1 class="title"> Te toco darle regalo a: </h1>
-        <%= render(IntermotoWeb.PeopleView, "people_card.html", p: @taken_people, conn: @conn) %>
+      <div class="column is-6 is-offset-3">
+        <article class="message is-danger">
+          <div class="message-body">
+            <p class="is-size-2 has-text-centered"> <%= @error_message %> </p>
+          </div>
+        </article>
         <div class="has-text-centered mt-3">
-          <%= link("Return", to: Routes.people_path(@conn, :index),
-          class: "button is-fullwidth is-success")  %>
+          <%= link("Return", to: Routes.room_people_path(@conn, :index, @room_code),
+          class: "button is-fullwidth is-danger")  %>
         </div>
       </div>
     </div>
   </div>
-   <div class="footer">
+  <div class="footer">
     <div class="content has-text-centered">
       <p class="has-text-black">
         Hecho por: <a href="https://github.com/llenrique" target="_blank">Enrique López</a> con

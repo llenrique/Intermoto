@@ -11,10 +11,6 @@ defmodule Intermoto.Repo.Migrations.CreatePeopleTable do
   end
 
   def down do
-    alter table(:people) do
-      remove :name
-      remove :taken_status
-      remove :select_status
-    end
+    drop table(:people)
   end
 end

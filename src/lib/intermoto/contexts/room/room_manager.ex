@@ -12,7 +12,7 @@ defmodule Intermoto.Contexts.Room.RoomManager do
     |> IO.inspect
   end
 
-  def get(room_code) do
+  def get_code(room_code) do
     Room
     |> where([room], room.room_code == ^room_code)
     |> select([room], %{
@@ -20,5 +20,11 @@ defmodule Intermoto.Contexts.Room.RoomManager do
     })
     |> Repo.one()
     |> IO.inspect
+  end
+
+  def get(room_code) do
+    Room
+    |> where([room], room.room_code == ^room_code)
+    |> Repo.one()
   end
 end

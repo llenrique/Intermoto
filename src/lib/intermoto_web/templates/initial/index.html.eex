@@ -49,7 +49,7 @@
 
         <%= link(
           "Estoy Listo!",
-          to: Routes.room_path(@conn, :index),
+          to: Routes.room_path(@conn, :new),
           class: "button is-link"
         )%>
       </div>

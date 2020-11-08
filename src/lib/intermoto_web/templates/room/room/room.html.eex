@@ -1,5 +1,14 @@
-<%= if Enum.empty?(@people) do %>
-
+<%= if Enum.empty?(@room.people) do %>
+  <div class="has-text-centered">
+    <p class="is-size-2">
+      <%= gettext("There are no people in the room") %>
+    </p>
+    <%= link(
+      gettext("Registerme in this room"),
+      to: Routes.people_path(@conn, :new),
+      class: "button is-info mt-2"
+    ) %>
+  </div>
 <% else %>
   <h1 class="title is-8"> Quien eres? </h1>
   <div class="field">
@@ -13,3 +22,5 @@
     </div>
   </div>
 <% end %>
+
+<%= link("Logout", to: Routes.session_path(@conn, :delete)) %>
