@@ -1,29 +1,12 @@
-<section class="hero is-white is-fullheight">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title is-8"> Quienes van a participar? </h1>
-      <div class="field">
-        <div class="control">
-          <div class="is-fullwidth is-large has-text-centered">
-            <%= form_for @conn, Routes.people_path(@conn, :create), [method: :post], fn f -> %>
-              <%= text_input f, :people, class: "input is-large", placeholder: "Sofia, Miguel, Javier, Edin, etc." %>
-              <%= submit "Crear lista", class: "button is-info mt-2 is-large" %>
-            <% end %>
-          </div>
-        </div>
-      </div>
+
+<h1 class="title is-8"> Quienes van a participar? </h1>
+<div class="field">
+  <div class="control">
+    <div class="is-fullwidth is-large has-text-centered">
+      <%= form_for @conn, Routes.people_path(@conn, :create), [method: :post], fn f -> %>
+        <%= text_input f, :people, class: "input is-large", placeholder: "Sofia, Miguel, Javier, Edin, etc." %>
+        <%= submit "Crear lista", class: "button is-info mt-2 is-large" %>
+      <% end %>
     </div>
   </div>
-  <div class="footer">
-    <div class="content has-text-centered">
-      <p class="has-text-black">
-        Hecho por: <a href="https://github.com/llenrique" target="_blank">Enrique López</a> con
-        <a href="https://bulma.io" target="_blank">Bulma</a> y <a href="https://www.phoenixframework.org/" target="_blank"> Elixir Phoenix</a>
-      </p>
-      <p class="has-text-black">
-        Proyecto de código abierto en:
-        <a href="https://github.com/llenrique/intermoto">Github</a>
-      </p>
-    </div>
-  </div>
-</section>
+</div>

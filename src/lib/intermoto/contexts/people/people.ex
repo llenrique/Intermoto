@@ -4,11 +4,14 @@ defmodule Intermoto.Contexts.People.People do
   import Ecto.Changeset
 
   alias Intermoto.Contexts.People.People
+  alias Intermoto.Contexts.Room.Room
 
   schema "people" do
     field :name, :string, null: false
     field :taken_status, :boolean, default: false
     field :select_status, :boolean, default: false
+
+    belongs_to :room, Room
     timestamps()
   end
 

@@ -24,7 +24,12 @@ defmodule IntermotoWeb.Router do
     get "new", PeopleController, :new
     get "/delete", PeopleController, :delete
     post "/", PeopleController, :create
+
+    scope "/room", Room do
+      resources "/", RoomController, only: [:index, :create, :show]
+    end
   end
+
 
   # Other scopes may use custom stacks.
   # scope "/api", IntermotoWeb do

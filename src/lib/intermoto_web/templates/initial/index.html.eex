@@ -49,23 +49,10 @@
 
         <%= link(
           "Estoy Listo!",
-          to: Routes.people_path(@conn, :index),
+          to: Routes.room_path(@conn, :index),
           class: "button is-link"
         )%>
       </div>
     </div>
   </div>
 </div>
-
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      Hecho por: <a href="https://github.com/llenrique" target="_blank">Enrique López</a> con
-      <a href="https://bulma.io" target="_blank">Bulma</a> y <a href="https://www.phoenixframework.org/" target="_blank"> Elixir Phoenix</a>
-    </p>
-    <p>
-      Proyecto de código abierto en:
-      <a href="https://github.com/llenrique/intermoto">Github</a>
-    </p>
-  </div>
-</footer>

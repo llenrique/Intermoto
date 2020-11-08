@@ -9,13 +9,34 @@
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   </head>
   <body>
-    <%# <header>
-    </header> %>
-    <main role="main">
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-      <%= render @view_module, @view_template, assigns %>
-    </main>
+    <section class="hero is-white is-fullheight">
+      <div class="hero-head">
+        <header class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a href="<%= Routes.initial_path(@conn, :index) %>" class="title navbar-item"> Instrucciones </a>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="hero-body">
+        <div class="container">
+          <%= render @view_module, @view_template, assigns %>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="content has-text-centered">
+          <p class="has-text-black">
+            Hecho por: <a href="https://github.com/llenrique" target="_blank">Enrique López</a> con
+            <a href="https://bulma.io" target="_blank">Bulma</a> y <a href="https://www.phoenixframework.org/" target="_blank"> Elixir Phoenix</a>
+          </p>
+          <p class="has-text-black">
+            Proyecto de código abierto en:
+            <a href="https://github.com/llenrique/intermoto">Github</a>
+          </p>
+        </div>
+      </div>
+    </section>
     <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
