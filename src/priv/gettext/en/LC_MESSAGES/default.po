@@ -14,14 +14,14 @@ msgstr ""
 #, elixir-format
 #: lib/intermoto_web/templates/room/room/index.html.eex:3
 msgid "Lets start creating a room"
-msgstr ""
+msgstr "Empecemos creando una sala"
 
 #, elixir-format
 #: lib/intermoto_web/templates/room/room/show.html.eex:18
 msgid "Comeback"
-msgstr ""
+msgstr "Regresa"
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/intermoto_web/templates/room/room/index.html.eex:21
 msgid "Create new room"
 msgstr "Crear sala"
@@ -29,24 +29,34 @@ msgstr "Crear sala"
 #, elixir-format
 #: lib/intermoto_web/templates/room/room/show.html.eex:3
 msgid "Here is your room code"
-msgstr ""
+msgstr "Aquí está tu código de la sala"
 
 #, elixir-format
 #: lib/intermoto_web/templates/room/room/index.html.eex:24
 msgid "Or Enter to existing room"
-msgstr ""
+msgstr "O entra a una sala existente"
 
 #, elixir-format
 #: lib/intermoto_web/templates/room/room/index.html.eex:14
 msgid "Set an access code for the room"
-msgstr ""
-
-#, elixir-format
-#: lib/intermoto_web/templates/room/room/show.html.eex:15
-msgid "Share it with your friends and/or family and start the interchange"
-msgstr ""
+msgstr "Agrega un codigo de acceso para la sala"
 
 #, elixir-format
 #: lib/intermoto_web/templates/room/room/index.html.eex:8
 msgid "What's the room name"
-msgstr ""
+msgstr "Cual es el nombre de la sala"
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/show.html.eex:18
+msgid "Now"
+msgstr "Ahora"
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/show.html.eex:15
+msgid "Share it with your friends and/or family, add some people and start the interchange"
+msgstr "Comparte con tus amigos y/o familia, agrega a unas personas y empieza tu intercambio"
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/show.html.eex:19
+msgid "and enter to the room with the access code you defined"
+msgstr "y entra con el codigo de acceso que definiste"

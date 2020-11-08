@@ -12,9 +12,9 @@
   </div>
 </div>
 <p class="has-text-centered is-size-4">
-  <%= gettext("Share it with your friends and/or family and start the interchange") %>
+  <%= gettext("Share it with your friends and/or family, add some people and start the interchange") %>
 </p>
 <p class="has-text-centered is-size-4">
-  Now <%= link(gettext("Comeback"), to: Routes.room_path(@conn, :index), class: "button is-link") %>
-  and enter to the room with the access code you defined
+  <%= gettext("Now") %> <%= link(gettext("Comeback"), to: Routes.room_path(@conn, :index), class: "button is-link") %>
+  <%= gettext("and enter to the room with the access code you defined") %>
 </p>

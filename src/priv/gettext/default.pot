@@ -41,11 +41,21 @@ msgid "Set an access code for the room"
 msgstr ""
 
 #, elixir-format
-#: lib/intermoto_web/templates/room/room/show.html.eex:15
-msgid "Share it with your friends and/or family and start the interchange"
+#: lib/intermoto_web/templates/room/room/index.html.eex:8
+msgid "What's the room name"
 msgstr ""
 
 #, elixir-format
-#: lib/intermoto_web/templates/room/room/index.html.eex:8
-msgid "What's the room name"
+#: lib/intermoto_web/templates/room/room/show.html.eex:18
+msgid "Now"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/show.html.eex:15
+msgid "Share it with your friends and/or family, add some people and start the interchange"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/show.html.eex:19
+msgid "and enter to the room with the access code you defined"
 msgstr ""
