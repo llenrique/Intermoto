@@ -1,0 +1,51 @@
+## This file is a PO Template file.
+##
+## "msgid"s here are often extracted from source code.
+## Add new translations manually only if they're dynamic
+## translations that can't be statically extracted.
+##
+## Run "mix gettext.extract" to bring this file up to
+## date. Leave "msgstr"s empty as changing them here as no
+## effect: edit them in PO (.po) files instead.
+msgid ""
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/index.html.eex:3
+msgid "Lets start creating a room"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/show.html.eex:18
+msgid "Comeback"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/index.html.eex:21
+msgid "Create new room"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/show.html.eex:3
+msgid "Here is your room code"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/index.html.eex:24
+msgid "Or Enter to existing room"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/index.html.eex:14
+msgid "Set an access code for the room"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/show.html.eex:15
+msgid "Share it with your friends and/or family and start the interchange"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/index.html.eex:8
+msgid "What's the room name"
+msgstr ""

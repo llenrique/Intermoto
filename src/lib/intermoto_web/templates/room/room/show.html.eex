@@ -1,0 +1,20 @@
+
+<p class="has-text-centered is-size-1">
+  <%= gettext("Here is your room code") <>":" %>
+</p>
+<div class="column is-2 is-offset-5">
+  <div class="card has-background-info">
+    <div class="card-content">
+      <h1 class="title has-text-centered has-text-white">
+        <%= @room.room_code %>
+      </h1>
+    </div>
+  </div>
+</div>
+<p class="has-text-centered is-size-4">
+  <%= gettext("Share it with your friends and/or family and start the interchange") %>
+</p>
+<p class="has-text-centered is-size-4">
+  Now <%= link(gettext("Comeback"), to: Routes.room_path(@conn, :index), class: "button is-link") %>
+  and enter to the room with the access code you defined
+</p>

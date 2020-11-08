@@ -1,0 +1,28 @@
+
+<h1 class="title is-8 has-text-centered">
+  <%= gettext("Lets start creating a room") %>
+</h1>
+<div class="column is-half is-offset-3">
+  <%= form_for @conn, Routes.room_path(@conn, :create), fn f -> %>
+  <div class="field">
+    <label class="label left"> <%= gettext("What's the room name") %>
+    <div class="control">
+      <%= text_input f, :name, placeholder: "Ej. Familia López", class: "input is-large" %>
+    </div>
+  </div>
+  <div class="field">
+    <label class="label left"> <%= gettext("Set an access code for the room") %>
+    <div class="control">
+      <%= text_input f, :access_code, type: "password", placeholder: "Ej. 123456", class: "input is-large" %>
+    </div>
+  </div>
+  <div class="field is-grouped is-grouped-centered">
+    <div class="control">
+      <%= submit gettext("Create new room"), class: "button is-info has-text-centered"%>
+    </div>
+    <div class="control">
+      <%= link(gettext("Or Enter to existing room"), to: Routes.room_path(@conn, :index), class: "button is-light is-text") %>
+    </div>
+  </div>
+<% end %>
+</div>
