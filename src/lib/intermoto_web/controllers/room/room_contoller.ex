@@ -28,7 +28,7 @@ defmodule IntermotoWeb.Room.RoomController do
     end
   end
 
-  def room(conn, %{"room_code" => room_code}) do
+  def index(conn, %{"room_code" => room_code}) do
     room = RoomManager.get(room_code)
 
     conn

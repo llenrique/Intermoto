@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 
 #, elixir-format
-#: lib/intermoto_web/templates/room/room/index.html.eex:3
+#: lib/intermoto_web/templates/room/room/new.html.eex:3
 msgid "Lets start creating a room"
 msgstr ""
 
@@ -21,7 +21,7 @@ msgid "Comeback"
 msgstr ""
 
 #, elixir-format
-#: lib/intermoto_web/templates/room/room/index.html.eex:21
+#: lib/intermoto_web/templates/room/room/new.html.eex:21
 msgid "Create new room"
 msgstr ""
 
@@ -31,17 +31,17 @@ msgid "Here is your room code"
 msgstr ""
 
 #, elixir-format
-#: lib/intermoto_web/templates/room/room/index.html.eex:24
+#: lib/intermoto_web/templates/room/room/new.html.eex:24
 msgid "Or Enter to existing room"
 msgstr ""
 
 #, elixir-format
-#: lib/intermoto_web/templates/room/room/index.html.eex:14
+#: lib/intermoto_web/templates/room/room/new.html.eex:14
 msgid "Set an access code for the room"
 msgstr ""
 
 #, elixir-format
-#: lib/intermoto_web/templates/room/room/index.html.eex:8
+#: lib/intermoto_web/templates/room/room/new.html.eex:8
 msgid "What's the room name"
 msgstr ""
 
@@ -58,4 +58,44 @@ msgstr ""
 #, elixir-format
 #: lib/intermoto_web/templates/room/room/show.html.eex:19
 msgid "and enter to the room with the access code you defined"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/index.html.eex:7
+msgid "Add you to the room"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/session/new.html.eex:20
+msgid "Get into room"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/session/new.html.eex:13
+msgid "Input room access code"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/session/new.html.eex:7
+msgid "Input room code"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/index.html.eex:4
+msgid "Its looks like there are no people in the room"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/session/new.html.eex:2
+msgid "Login to the room"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/room.html.eex:7
+msgid "Registerme in this room"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/room.html.eex:4
+msgid "There are no people in the room"
 msgstr ""

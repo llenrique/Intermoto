@@ -8,7 +8,7 @@ defmodule IntermotoWeb.SessionController do
       nil ->
         render(conn, "new.html")
       room ->
-        redirect(conn, to: Routes.room_people_path(conn, :new))
+        redirect(conn, to: Routes.room_people_path(conn, :index, room.room_code))
     end
   end
 
@@ -33,7 +33,7 @@ defmodule IntermotoWeb.SessionController do
   def delete(conn, _params) do
     conn
     |> delete_session(:room)
-    |> redirect(to: Routes.session_path(conn, :new))
+    |> redirect(to: Routes.room_path(conn, :new))
   end
 
   defp _access_room(room, access_code) do

@@ -12,7 +12,7 @@ msgstr ""
 "Plural-Forms: nplurals=2\n"
 
 #, elixir-format
-#: lib/intermoto_web/templates/room/room/index.html.eex:3
+#: lib/intermoto_web/templates/room/room/new.html.eex:3
 msgid "Lets start creating a room"
 msgstr "Empecemos creando una sala"
 
@@ -22,7 +22,7 @@ msgid "Comeback"
 msgstr "Regresa"
 
 #, elixir-format
-#: lib/intermoto_web/templates/room/room/index.html.eex:21
+#: lib/intermoto_web/templates/room/room/new.html.eex:21
 msgid "Create new room"
 msgstr "Crear sala"
 
@@ -32,17 +32,17 @@ msgid "Here is your room code"
 msgstr "Aquí está tu código de la sala"
 
 #, elixir-format
-#: lib/intermoto_web/templates/room/room/index.html.eex:24
+#: lib/intermoto_web/templates/room/room/new.html.eex:24
 msgid "Or Enter to existing room"
 msgstr "O entra a una sala existente"
 
 #, elixir-format
-#: lib/intermoto_web/templates/room/room/index.html.eex:14
+#: lib/intermoto_web/templates/room/room/new.html.eex:14
 msgid "Set an access code for the room"
-msgstr "Agrega un codigo de acceso para la sala"
+msgstr "Agrega un código de acceso para la sala"
 
 #, elixir-format
-#: lib/intermoto_web/templates/room/room/index.html.eex:8
+#: lib/intermoto_web/templates/room/room/new.html.eex:8
 msgid "What's the room name"
 msgstr "Cual es el nombre de la sala"
 
@@ -59,4 +59,44 @@ msgstr "Comparte con tus amigos y/o familia, agrega a unas personas y empieza tu
 #, elixir-format
 #: lib/intermoto_web/templates/room/room/show.html.eex:19
 msgid "and enter to the room with the access code you defined"
-msgstr "y entra con el codigo de acceso que definiste"
+msgstr "y entra con el código de acceso que definiste"
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/index.html.eex:7
+msgid "Add you to the room"
+msgstr "Agregate a la sala"
+
+#, elixir-format
+#: lib/intermoto_web/templates/session/new.html.eex:20
+msgid "Get into room"
+msgstr "Entrar a la sala"
+
+#, elixir-format
+#: lib/intermoto_web/templates/session/new.html.eex:13
+msgid "Input room access code"
+msgstr "Ingresa el código de acceso"
+
+#, elixir-format
+#: lib/intermoto_web/templates/session/new.html.eex:7
+msgid "Input room code"
+msgstr "Ingresa el número de la sala"
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/index.html.eex:4
+msgid "Its looks like there are no people in the room"
+msgstr "Parece que no hay personas en esta sala"
+
+#, elixir-format
+#: lib/intermoto_web/templates/session/new.html.eex:2
+msgid "Login to the room"
+msgstr "Accede a la sala"
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/room.html.eex:7
+msgid "Registerme in this room"
+msgstr "Registrame en esta sala"
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/room.html.eex:4
+msgid "There are no people in the room"
+msgstr "No hay gente en esta sala"
