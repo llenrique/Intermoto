@@ -4,49 +4,46 @@
       <div class="content is-medium">
         <h1 class="title"> Instrucciones </h1>
 
-        <p>
+        <p class="has-text-justified">
           A continuación, se muestran las instrucciones para saber a quien se le tiene que dar regalo en el intercambio navideño que organizamos cada año.
         </p>
 
         <ol>
-          <li> De la lista de personas que se muestra, debes buscarte, seleccionarte y dar click en el botón <code> Seleccionar </code>.</li>
-          <li> El sistema te mostrara el nombre y foto de a quien debes darle/enviarle regalo este 24 de Diciembre. </li>
-          <li> Si recargas la página, te mostrata un mensaje de error ya que tú ya has participado. </li>
-          <li> Da click en el botón que dice: Return. </li>
+          <li> Dale un nombre a tu sala.</li>
+          <li> Agrega un código de acceso. Como una contraseña. </li>
+          <li> El sistema te dará un código de identificación de tu sala. </li>
+          <li> Utiliza el código que te dio el sistema y tu contraseña para acceder a la sala. Este código y la contraseña que definiste, deberas compartirlos con tus amigos y/o familiares con quienes vayas a hacer tu intercambio. </li>
+          <li> Agregate a la sala, Ingresa un nombre, tu email, una foto, y si lo prefieres agrega un link al articulo que te gustaria recibir en el intercambio, por ejemplo el link a Amazon o una Amazon Wishlist.  </li>
         </ol>
 
-        <p>
-          Así de fácil, así de sencillo.
+        <p class="has-text-justified"> <b> Si recibiste un código de sala, accede y sigue el paso 5 en adelante</b>.</p>
+
+        <h2 class="subtitle"> Cómo participar? </h2>
+
+        <p class="has-text-justified"> Una vez que todos los participantes se hayan registrado: </p>
+
+        <ol>
+          <li> Accede a la sala. </li>
+          <li> Busca <code> tu nombre </code> en la lista. </li>
+          <li> Da click en el botón <code> Seleccionar</code>. El sistema seleccionara aleatoriamente a quien le tienes que dar regalo y te lo mostrara en pantalla.</li>
+          <li> Si recargas la página esperando obtener otro resultado sl sistema te mandará un error indicandote que tu ya participaste.</li>
+        </ol>
+
+        <h2 class="subtitle"> Cómo funciona? </h2>
+
+        <p class="has-text-justified">
+          Consideremos la forma en la que se realizan los intercambios tradicionalmente. Un grupo de personas meten en una urna todos los nombres de los participantes en forma de papelitos, dicha urna se mezcla, posteriormente cada participante toma un papel de dicha urna con el fin de obtener de manera aleatoria una persona a quien darle regalo. Si una persona saca el papel con su nombre, el sorteo se reinicia.
         </p>
 
-        <p>
-          Ten en cuenta que el sistema se asegura de que <b>no te des regalo a ti mismo</b>, y que si intentas obtener a otra persona para darle regalo el sistema no te dejara. De esta manera se asegura que todos den y todos reciban regalo.
-        </p>
+        <p class="has-text-justified">En este caso es similar.</p>
 
-        <h2 class="subtitle">Cómo funciona?</h2>
+        <p class="has-text-justified">Cuando te registras en una sala se te asignan 2 status con un valor de <code>False</code> o Falso, un <code>taken_status</code> el cual le indica al sistema que <i>no has participado</i> y un <code>select_status</code> el cual le indica al sistema que no has sido <i>sacado de la urna</i> o que no has sido seleccionado. Cuando te seleccionas de la lista, el valor del <code>taken_status</code> se convierte en <code>True</code> o Verdadero y cuando el sistema te selecciona de manera aleatoria para recibir regalo, el valor del <code>select_status</code> tambien se convierte en verdadero. Esto le indica al sistema quien ya participo y quien ya va a recibir regalo, por lo tanto, en la siguiente seleccion las personas con el <code>select_status</code> con valor <code>True</code> seran descartadas de la lista. De la misma forma, las personas con <code>taken_status</code> con valor <code>True</code> no podran participar nuevamente a menos que se reinicie el intercambio.</p>
 
-        <p>
-          Si ya participaste, no apareceras en la lista.
-        </p>
+        <p class="has-text-justified"> Ten en cuenta que el sistema evita que te des regalo a ti mismo, pero puede ocurrir el caso en que una persona nunca sea seleccionada y que esta persona sea el último participante, en este caso, esta persona seria la única con sus dos status en <code>False</code> y al momento de seleccionarse no podra darse regalo a si mismo, por lo que el intercambio tendra que reiniciarse.</p>
 
-        <p>
-          Cada persona en la lista tiene dos <code>status</code>, uno para saber cuando una persona ya <i>"Tomo un papelito de la urna"</i> y otro para saber cuando una persona fue <i>"Sacada de la urna"</i>. Cuando una persona se selecciona, se actualiza uno de estos dos status indicandole al sistema que ya participaste y actualiza el otro de estos status de la persona que te toco indicandole al sistema que esta persona ya fue <i>"Sacada de la urna"</i>.
-        </p>
+        <p class="has-text-justified">Mientras más personas participen, las probabilidades de que esto ocurra seran menores. <a href="https://es.wikipedia.org/wiki/Aleatoriedad#:~:text=La%20aleatoriedad%20se%20asocia%20a,de%20que%20este%20se%20produzca." target="_blank">Teoria de aleatoriedad</a>.</p>
 
-        <p>
-          Cada persona tiene un <code>id</code> o <b>identificador único</b> asignado, por lo que cuando te seleccionas, el sistema te excluye de la lista de personas que no han sido sacadas de la urna para asegurar que <b>no te des regalo a ti mismo</b>.
-         </p>
-
-        <p>
-          Cuando clickeas en el botón <code>Seleccionar</code>, el sistema obtiene la lista de personas que no han sido sacadas de la urna y obtiene a una persona al azar por lo que <b>no hay un patron de asignación</b>.
-         </p>
-
-        <p>
-          El sistema no almacena información sobre quien le da regalo a quien por lo que es imposible saber quien le va a dar regalo a quien.
-         </p>
-
-         <h2 class="subtitle">Listo para participar?</h2>
-
+        <h3 class="subtitle">Estas listo?</h3>
         <%= link(
           "Estoy Listo!",
           to: Routes.room_path(@conn, :new),
