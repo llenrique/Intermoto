@@ -4,8 +4,12 @@ defmodule IntermotoWeb.Room.RoomController do
   alias Intermoto.Helpers.Room.RoomHelper
   alias Intermoto.Contexts.Room.RoomManager
 
+  plug(IntermotoWeb.Plugs.CurrentRoomPlug)
+
   def new(conn, _params) do
-    render(conn, "new.html")
+    conn
+    |> assign(:people, [])
+    |> render("new.html")
   end
 
   def create(conn, params) do
@@ -23,6 +27,7 @@ defmodule IntermotoWeb.Room.RoomController do
         redirect(conn, to: Routes.room_path(conn, :index))
       room ->
         conn
+        |> assign(:people, [])
         |> assign(:room, room)
         |> render("show.html")
     end

@@ -22,10 +22,11 @@ defmodule IntermotoWeb.Router do
       get "/reset", ResetController, :reset
       get "/people/select", People.PeopleController, :select
       get "/people/quick_list", People.PeopleController, :quick_list
+      get "/people/list", People.PeopleController, :list_people
       resources "/people", People.PeopleController
     end
 
-    resources "/sessions", SessionController, only: [:create, :delete]
+    resources "/sessions", SessionController, only: [:create]
     get "/login-room", SessionController, :new
     get "/logout-room", SessionController, :delete
 

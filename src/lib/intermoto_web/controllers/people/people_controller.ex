@@ -7,6 +7,9 @@ defmodule IntermotoWeb.People.PeopleController do
   alias Intermoto.Contexts.Room.RoomManager
   alias Intermoto.Helpers.People.PeopleHelper
 
+  plug(IntermotoWeb.Plugs.CurrentRoomPlug)
+
+
   def index(conn, %{"room_id" => room_code}) do
     room = RoomManager.get(room_code)
 
@@ -25,6 +28,7 @@ defmodule IntermotoWeb.People.PeopleController do
 
     with {:ok, taken_people} <- PeopleHelper.select_people_to_give_gift_for(room.id, people_id) |> IO.inspect() do
       conn
+      |> assign(:people, [])
       |> assign(:room_code, room.room_code)
       |> assign(:taken_people, taken_people)
       |> render("show.html")
@@ -33,6 +37,7 @@ defmodule IntermotoWeb.People.PeopleController do
         IO.inspect("Error al seleccionar persona para dar regalo")
 
         conn
+        |> assign(:people, [])
         |> assign(:error_message, message)
         |> assign(:room_code, room.room_code)
         |> render("error.html")
@@ -41,12 +46,25 @@ defmodule IntermotoWeb.People.PeopleController do
 
   def quick_list(conn, %{"room_id" => room_code}) do
     conn
+    |> assign(:people, [])
     |> assign(:room_code, room_code)
     |> render("quick_list.html")
   end
 
+  def list_people(conn, %{"room_id"=> room_code}) do
+    room = RoomManager.get(room_code)
+
+    room_people = PeopleManager.list(room.id)
+
+    conn
+    |> assign(:room, room)
+    |> assign(:people, room_people)
+    |> render("list_people.html")
+  end
+
   def new(conn, %{"room_id" => room_code}) do
     conn
+    |> assign(:people, [])
     |> assign(:room_code, room_code)
     |> render("new.html")
   end

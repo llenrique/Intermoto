@@ -13,9 +13,28 @@
       <div class="hero-head">
         <header class="navbar">
           <div class="container">
-            <div class="navbar-brand">
-              <a href="<%= Routes.initial_path(@conn, :index) %>" class="title navbar-item"> Instrucciones </a>
-            </div>
+              <div class="navbar-brand">
+                <a href="<%= Routes.initial_path(@conn, :index) %>" class="title navbar-item"> Instrucciones </a>
+              </div>
+              <div id="navbarMenuHeroA" class="navbar-menu">
+                <div class="navbar-end">
+                  <%= unless Enum.empty?(@people) do %>
+                    <a
+                      href="<%= Routes.room_people_path(@conn, :list_people, @room.room_code) %>"
+                      class="navbar-item is-info has-background-info has-text-white">
+                      Ver participantes
+                    </a>
+                    <a class="navbar-item has-background-danger has-text-white">
+                      Eliminar sala
+                    </a>
+                  <% end %>
+                  <%= unless is_nil(@room) do %>
+                  <a href="<%= Routes.session_path(@conn, :delete) %>" class="navbar-item">
+                    <span>Salir de la sala</span>
+                  </a>
+                  <% end %>
+                </div>
+              </div>
           </div>
         </header>
       </div>

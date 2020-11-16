@@ -11,7 +11,12 @@ defmodule Intermoto.Contexts.People.PeopleManager do
     |> where([p], p.room_id == ^room_id)
     |> select([p], %{
       name: p.name,
-      id: p.id
+      id: p.id,
+      email: p.email,
+      address: p.address,
+      gift: p.gift,
+      taken_status: p.taken_status,
+      select_status: p.select_status
     })
     |> order_by([p], p.name)
     |> Repo.all()
