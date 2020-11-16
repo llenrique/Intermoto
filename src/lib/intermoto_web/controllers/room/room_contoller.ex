@@ -8,7 +8,7 @@ defmodule IntermotoWeb.Room.RoomController do
     render(conn, "new.html")
   end
 
-  def create(conn, %{"name" => name} = params) do
+  def create(conn, params) do
     with {:ok, room} <- RoomHelper.create(params) do
       redirect(conn, to: Routes.room_path(conn, :show, room.room_code))
     else
