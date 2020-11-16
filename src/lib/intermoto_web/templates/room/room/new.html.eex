@@ -13,7 +13,7 @@
   <div class="field">
     <label class="label left"> <%= gettext("Set an access code for the room") %>
     <div class="control">
-      <%= text_input f, :access_code, type: "password", placeholder: "Ej. 123456", class: "input is-large" %>
+      <%= text_input f, :access_code, type: "password", placeholder: "Ej. abc1234", class: "input is-large" %>
     </div>
   </div>
   <div class="field is-grouped is-grouped-centered">
@@ -21,7 +21,7 @@
       <%= submit gettext("Create new room"), class: "button is-info has-text-centered"%>
     </div>
     <div class="control">
-      <%= link(gettext("Or Enter to existing room"), to: Routes.session_path(@conn, :new), class: "button is-light is-text") %>
+      <%= link(gettext("Or Enter to existing room"), to: Routes.session_path(@conn, :new), class: "button is-success is-text") %>
     </div>
   </div>
 <% end %>
