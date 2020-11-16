@@ -21,14 +21,14 @@
       <div class="field">
         <label class="label"><%= gettext("Address") %></label>
         <div class="control">
-          <%= text_input f, :email, class: "input is-large", placeholder: "Ej. Av. Cuitlahuac no. 12, edifico 1D depto 102, C.P 54743" %>
+          <%= text_input f, :address, class: "input is-large", placeholder: "Ej. Av. Cuitlahuac no. 12, edifico 1D depto 102, C.P 54743" %>
         </div>
       </div>
 
       <div class="field">
         <label class="label"><%= gettext("Expected gift") %></label>
         <div class="control">
-          <%= text_input f, :email, class: "input is-large", placeholder: "Ej. Reloj o www.amazon.com/reloj" %>
+          <%= text_input f, :gift, class: "input is-large", placeholder: "Ej. Reloj o www.amazon.com/reloj" %>
         </div>
       </div>
 
