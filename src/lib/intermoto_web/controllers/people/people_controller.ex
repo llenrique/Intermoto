@@ -67,7 +67,7 @@ defmodule IntermotoWeb.People.PeopleController do
   def create(conn, %{"room_id" => room_code} = params) do
     room = RoomManager.get(room_code)
 
-    params = Map.put(params, "room_id", room.id)
+    params = Map.put(params, "room_id", room.id) |> IO.inspect
 
     with {:ok, %People{}} <- PeopleManager.create(params) do
       redirect(conn, to: Routes.room_people_path(conn, :index, room_code))
