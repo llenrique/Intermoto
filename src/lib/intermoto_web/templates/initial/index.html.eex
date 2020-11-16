@@ -3,13 +3,6 @@
     <div class="conitainer">
       <div class="content is-medium">
         <h1 class="title"> Instrucciones </h1>
-        <ol>
-          <li> Dale un nombre a tu sala.</li>
-          <li> Agrega un código de acceso, como una contraseña. </li>
-          <li> El sistema te dará un código de identificación para tu sala. </li>
-          <li> Utiliza el código que te dio el sistema y tu contraseña para acceder a la sala. Este código y la contraseña que definiste, deberas compartirlos con tus amigos y/o familiares con quienes vayas a hacer el intercambio. </li>
-          <li> Agrégate a la sala, Ingresa un nombre, tu email, una foto, y si lo prefieres agrega un link al articulo que te gustaria recibir en el intercambio, por ejemplo el link a Amazon o una Amazon Wishlist.  </li>
-        </ol>
 
         <div class="has-text-centered">
           <img src="<%= Routes.static_url(@conn, "/images/create_a_room.gif") %>">
