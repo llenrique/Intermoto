@@ -2,7 +2,7 @@ defmodule IntermotoWeb.People.PeopleController do
   use IntermotoWeb, :controller
 
 
-  alias Intermoto.Contexts.People.PeopleManager
+  alias Intermoto.Contexts.People.People
   alias Intermoto.Contexts.People.PeopleManager
   alias Intermoto.Contexts.Room.RoomManager
   alias Intermoto.Helpers.People.PeopleHelper
@@ -39,13 +39,19 @@ defmodule IntermotoWeb.People.PeopleController do
     end
   end
 
+  def quick_list(conn, %{"room_id" => room_code}) do
+    conn
+    |> assign(:room_code, room_code)
+    |> render("quick_list.html")
+  end
+
   def new(conn, %{"room_id" => room_code}) do
     conn
     |> assign(:room_code, room_code)
     |> render("new.html")
   end
 
-  def create(conn, %{"room_id" => room_code, "people" => people} = params) do
+  def create(conn, %{"room_id" => room_code, "people" => people}) do
     room = RoomManager.get(room_code)
 
     with :ok <- PeopleHelper.create(room.id, people) do
@@ -58,9 +64,24 @@ defmodule IntermotoWeb.People.PeopleController do
     end
   end
 
+  def create(conn, %{"room_id" => room_code} = params) do
+    room = RoomManager.get(room_code)
+
+    params = Map.put(params, "room_id", room.id)
+
+    with {:ok, %People{}} <- PeopleManager.create(params) do
+      redirect(conn, to: Routes.room_people_path(conn, :index, room_code))
+    else
+      {:error, message} ->
+        conn
+        |> assign(:error_message, message)
+        |> render("error.html")
+    end
+  end
+
   def delete(conn, _params) do
     PeopleManager.delete()
 
-    redirect(conn, to: Routes.people_path(conn, :index))
+    redirect(conn, to: Routes.room_people_path(conn, :index))
   end
 end
