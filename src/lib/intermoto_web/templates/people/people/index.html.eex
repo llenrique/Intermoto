@@ -3,11 +3,20 @@
     <p class="is-size-2">
       <%= gettext("Its looks like there are no people in the room") %>
     </p>
-    <%= link(
-      gettext("Add you to the room"),
-      to: Routes.room_people_path(@conn, :new, @room.room_code),
-      class: "button is-info is-medium"
-    ) %>
+
+    <div class="buttons field is-grouped is-grouped-centered">
+      <%= link(
+        gettext("Register you on this room"),
+        to: Routes.room_people_path(@conn, :new, @room.room_code),
+        class: "button is-info is-medium"
+      ) %>
+
+      <%= link(
+        gettext("Or create a quick list"),
+        to: Routes.room_people_path(@conn, :quick_list, @room.room_code),
+        class: "button is-success is-link is-medium"
+      ) %>
+    </div>
   </div>
 <% else %>
 <h1 class="title is-8"> Quien eres? </h1>
