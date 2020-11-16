@@ -21,6 +21,7 @@ defmodule IntermotoWeb.Router do
     resources "/room", Room.RoomController, only: [:new, :create, :show, :index] do
       get "/reset", ResetController, :reset
       get "/people/select", People.PeopleController, :select
+      get "/people/quick_list", People.PeopleController, :quick_list
       resources "/people", People.PeopleController
     end
 
