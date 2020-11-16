@@ -5,9 +5,13 @@
         <h1 class="title"> Instrucciones </h1>
 
         <div class="has-text-centered">
+          <h1 class="title"><%= gettext("Step") %> 1</h1>
           <img src="<%= Routes.static_url(@conn, "/images/create_a_room.gif") %>">
+          <h1 class="title"><%= gettext("Step") %> 2</h1>
           <img src="<%= Routes.static_url(@conn, "/images/room_code.gif") %>">
+          <h1 class="title"><%= gettext("Step") %> 3</h1>
           <img src="<%= Routes.static_url(@conn, "/images/access_to_room.gif") %>">
+          <h1 class="title"><%= gettext("Step") %> 4</h1>
         </div>
 
         <p class="has-text-justified"> <b> Si recibiste un código de sala, accede y sigue el paso 5 en adelante</b>.</p>
