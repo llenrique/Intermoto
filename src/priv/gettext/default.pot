@@ -61,11 +61,6 @@ msgid "and enter to the room with the access code you defined"
 msgstr ""
 
 #, elixir-format
-#: lib/intermoto_web/templates/people/people/index.html.eex:7
-msgid "Add you to the room"
-msgstr ""
-
-#, elixir-format
 #: lib/intermoto_web/templates/session/new.html.eex:20
 msgid "Get into room"
 msgstr ""
@@ -91,11 +86,78 @@ msgid "Login to the room"
 msgstr ""
 
 #, elixir-format
-#: lib/intermoto_web/templates/room/room/room.html.eex:7
-msgid "Registerme in this room"
+#: lib/intermoto_web/templates/room/room/room.html.eex:4
+msgid "There are no people in the room"
 msgstr ""
 
 #, elixir-format
-#: lib/intermoto_web/templates/room/room/room.html.eex:4
-msgid "There are no people in the room"
+#: lib/intermoto_web/templates/initial/index.html.eex:8
+#: lib/intermoto_web/templates/initial/index.html.eex:10 lib/intermoto_web/templates/initial/index.html.eex:12
+#: lib/intermoto_web/templates/initial/index.html.eex:14
+msgid "Step"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/index.html.eex:15
+msgid "Or create a quick list"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/quick_list.html.eex:17
+msgid "Quick list"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/index.html.eex:9
+msgid "Register you on this room"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/room.html.eex:7
+msgid "Registerme in this room 2"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/quick_list.html.eex:21
+msgid "\n          When you create a quick list, you can't add photos, emails, addresses or any other personal information for every participar. But nevertheless, each participant could edit their own information in the future.\n        "
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/new.html.eex:45
+msgid "\n            This is the slowlest way to create an interchange. But this way, you can add more information about what do you want to receive and where to send your gift.\n          "
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/new.html.eex:22
+msgid "Address"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/new.html.eex:15
+msgid "Email"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/new.html.eex:8
+msgid "Name"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/new.html.eex:41
+msgid "One by one"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/new.html.eex:3
+msgid "Who are you?"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/new.html.eex:29
+msgid "Expected gift"
+msgstr ""
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/new.html.eex:36
+msgid "Register me"
 msgstr ""

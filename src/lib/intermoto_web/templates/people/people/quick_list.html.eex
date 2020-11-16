@@ -1,0 +1,28 @@
+
+<div class="has-text-centered">
+  <h1 class="title is-8"> Quienes van a participar? </h1>
+  <div class="column is-half is-offset-3">
+    <div class="field">
+      <div class="control">
+        <div class="is-fullwidth is-large has-text-centered">
+          <%= form_for @conn, Routes.room_people_path(@conn, :create, @room_code), [method: :post], fn f -> %>
+            <%= text_input f, :people, class: "input is-large", placeholder: "Sofia, Miguel, Javier, Edin, etc." %>
+            <%= submit "Crear lista", class: "button is-info mt-2 is-medium" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <article class="message is-info">
+    <div class="message-header">
+      <p><%= gettext("Quick list") %></p>
+    </div>
+    <div class="message-body">
+      <%=
+        gettext("
+          When you create a quick list, you can't add photos, emails, addresses or any other personal information for every participar. But nevertheless, each participant could edit their own information in the future.
+        ")
+      %>
+    </div>
+  </article>
+  </div>
+</div>

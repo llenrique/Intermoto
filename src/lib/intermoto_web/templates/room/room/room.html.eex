@@ -4,8 +4,8 @@
       <%= gettext("There are no people in the room") %>
     </p>
     <%= link(
-      gettext("Registerme in this room"),
-      to: Routes.people_path(@conn, :new),
+      gettext("Registerme in this room 2"),
+      to: Routes.room_people_path(@conn, :new),
       class: "button is-info mt-2"
     ) %>
   </div>
@@ -14,7 +14,7 @@
   <div class="field">
     <div class="control">
       <div class="select is-fullwidth is-large has-text-centered">
-        <%= form_for @conn, Routes.people_path(@conn, :select), [method: :get], fn f -> %>
+        <%= form_for @conn, Routes.room_people_path(@conn, :select), [method: :get], fn f -> %>
           <%= select(f, :people_id, @people) %>
           <%= submit "Seleccionar", class: "button is-info mt-2 is-large" %>
         <% end %>

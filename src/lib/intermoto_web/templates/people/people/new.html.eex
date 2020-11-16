@@ -1,16 +1,51 @@
 
-<div class="has-text-centered">
-  <h1 class="title is-8"> Quienes van a participar? </h1>
+  <h1 class="title is-8 has-text-centered">
+    <%= gettext("Who are you?") %>
+  </h1>
   <div class="column is-half is-offset-3">
-    <div class="field">
-      <div class="control">
-        <div class="is-fullwidth is-large has-text-centered">
-          <%= form_for @conn, Routes.room_people_path(@conn, :create, @room_code), [method: :post], fn f -> %>
-            <%= text_input f, :people, class: "input is-large", placeholder: "Sofia, Miguel, Javier, Edin, etc." %>
-            <%= submit "Crear lista", class: "button is-info mt-2 is-medium" %>
-          <% end %>
+    <%= form_for @conn, Routes.room_people_path(@conn, :create, @room_code), [method: :post], fn f -> %>
+      <div class="field">
+        <label class="label left"><%= gettext("Name") %></label>
+        <div class="control">
+          <%= text_input f, :name, class: "input is-large", placeholder: "Ej. Enrique" %>
         </div>
       </div>
-    </div>
+
+      <div class="field">
+        <label class="label"><%= gettext("Email") %></label>
+        <div class="control">
+          <%= email_input f, :email, class: "input is-large", placeholder: "Ej. enrique@me.com" %>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label"><%= gettext("Address") %></label>
+        <div class="control">
+          <%= text_input f, :email, class: "input is-large", placeholder: "Ej. Av. Cuitlahuac no. 12, edifico 1D depto 102, C.P 54743" %>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label"><%= gettext("Expected gift") %></label>
+        <div class="control">
+          <%= text_input f, :email, class: "input is-large", placeholder: "Ej. Reloj o www.amazon.com/reloj" %>
+        </div>
+      </div>
+
+      <div class="field is-grouped is-grouped-centered">
+        <%= submit gettext("Register me"), class: "button is-info mt-2 is-medium" %>
+      </div>
+    <% end %>
+    <article class="message is-info mt-4">
+      <div class="message-header">
+        <p><%= gettext("One by one") %></p>
+      </div>
+      <div class="message-body">
+        <%=
+          gettext("
+            This is the slowlest way to create an interchange. But this way, you can add more information about what do you want to receive and where to send your gift.
+          ")
+        %>
+      </div>
+    </article>
   </div>
-</div>

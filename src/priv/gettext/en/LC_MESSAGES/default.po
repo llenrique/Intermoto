@@ -62,11 +62,6 @@ msgid "and enter to the room with the access code you defined"
 msgstr "y entra con el código de acceso que definiste"
 
 #, elixir-format
-#: lib/intermoto_web/templates/people/people/index.html.eex:7
-msgid "Add you to the room"
-msgstr "Agregate a la sala"
-
-#, elixir-format
 #: lib/intermoto_web/templates/session/new.html.eex:20
 msgid "Get into room"
 msgstr "Entrar a la sala"
@@ -92,11 +87,78 @@ msgid "Login to the room"
 msgstr "Accede a la sala"
 
 #, elixir-format
-#: lib/intermoto_web/templates/room/room/room.html.eex:7
-msgid "Registerme in this room"
-msgstr "Registrame en esta sala"
-
-#, elixir-format
 #: lib/intermoto_web/templates/room/room/room.html.eex:4
 msgid "There are no people in the room"
 msgstr "No hay gente en esta sala"
+
+#, elixir-format
+#: lib/intermoto_web/templates/initial/index.html.eex:8
+#: lib/intermoto_web/templates/initial/index.html.eex:10 lib/intermoto_web/templates/initial/index.html.eex:12
+#: lib/intermoto_web/templates/initial/index.html.eex:14
+msgid "Step"
+msgstr "Paso"
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/index.html.eex:15
+msgid "Or create a quick list"
+msgstr "O crea una lista rapida"
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/quick_list.html.eex:17
+msgid "Quick list"
+msgstr "Lista rapida"
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/index.html.eex:9
+msgid "Register you on this room"
+msgstr "Registrame en esta sala"
+
+#, elixir-format
+#: lib/intermoto_web/templates/room/room/room.html.eex:7
+msgid "Registerme in this room 2"
+msgstr "Registrame en esta sala"
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/quick_list.html.eex:21
+msgid "\n          When you create a quick list, you can't add photos, emails, addresses or any other personal information for every participar. But nevertheless, each participant could edit their own information in the future.\n        "
+msgstr "Cuando creas una lista rápida, no podras agregar fotos, correos electronicos, direcciones o cualquier otra información personal de cada participante. Sin embargo, cada participante podrá editar su información personal en el futuro"
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/new.html.eex:45
+msgid "\n            This is the slowlest way to create an interchange. But this way, you can add more information about what do you want to receive and where to send your gift.\n          "
+msgstr "Esta es la forma mas lenta de crear un intercambio. Pero de esta forma, podras agregar mas información sobre el regalo que quisieras recibir y a donde mandarlo."
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/new.html.eex:22
+msgid "Address"
+msgstr "Dirección"
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/new.html.eex:15
+msgid "Email"
+msgstr "Correo electronico"
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/new.html.eex:8
+msgid "Name"
+msgstr "Nombre"
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/new.html.eex:41
+msgid "One by one"
+msgstr "Uno por uno"
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/new.html.eex:3
+msgid "Who are you?"
+msgstr "Quién eres?"
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/new.html.eex:29
+msgid "Expected gift"
+msgstr "Regalo esperado"
+
+#, elixir-format
+#: lib/intermoto_web/templates/people/people/new.html.eex:36
+msgid "Register me"
+msgstr "Registrarme"
