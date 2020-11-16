@@ -32,3 +32,5 @@ src/assets/node_modules/
 # we ignore priv/static. You may want to comment
 # this depending on your deployment strategy.
 src/priv/static/.
+
+.DS_store
