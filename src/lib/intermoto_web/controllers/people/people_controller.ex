@@ -1,6 +1,7 @@
 defmodule IntermotoWeb.People.PeopleController do
   use IntermotoWeb, :controller
 
+
   alias Intermoto.Contexts.People.PeopleManager
   alias Intermoto.Contexts.People.PeopleManager
   alias Intermoto.Contexts.Room.RoomManager
