@@ -34,3 +34,19 @@
   ```shell
   apt-get install cmake
   ```
+
+## Inicializacion del proyecto
+
+1. En la raíz del proyecto, ejecuta el comando
+
+   ```shell
+   make bootstrap
+   ```
+   
+2. Posterior a esto, para levantar el contenedor del proyecto, deberas ejecutar el comando:
+
+  ```shell
+  make phx.logs
+  ```
+  
+ Esto levantara una instancia del proyecto en docker mostrandote en la terminal los logs del sistemna.
