@@ -1,20 +1,36 @@
-# Intermoto
+### Pre-requisitos
 
-To start your Phoenix server:
+#### Docker
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
+- MacOS
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+  ```
+  Descargar e instalar: https://download.docker.com/mac/stable/Docker.dmg
+  ```
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+- Linux
 
-## Learn more
+  ```shell
+  curl -sSL https://get.docker.com/ | sh
+  sudo usermod -aG docker $(whoami)
+  curl -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  chmod +x /usr/local/bin/docker-compose
+  ```
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+  NOTA:
+
+  Se deberá reiniciar o salirse de la sesión para poder tomar los cambios
+
+#### Cmake
+
+- MacOS
+
+  ```shell
+  brew install cmake
+  ```
+
+- Linux
+
+  ```shell
+  apt-get install cmake
+  ```
